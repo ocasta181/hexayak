@@ -1,0 +1,19 @@
+{
+  "name": "isopope",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocasta181/isopope.git"
+  },
+  "author": "akf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ocasta181/isopope/issues"
+  },
+  "homepage": "https://github.com/ocasta181/isopope#readme"
+}
