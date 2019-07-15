@@ -16,7 +16,9 @@ io.on('connection', (socket) => {
     if (player_count < 2){
         player_count += 1
         console.log('player '+player_count+" entered the game")
+        socket.emit('player_info', {'player': player_count})
     } else {
         console.log('too many players!')
+        socket.emit('warn', {'warning': "game is full"})
     }
 })
