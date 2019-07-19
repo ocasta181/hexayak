@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {PlayerProvider} from './PlayerContext'
+import {PlayerProvider} from './Contexts/PlayerContext'
 
 ReactDOM.render(<PlayerProvider><App /></PlayerProvider>, document.getElementById('root'));
 

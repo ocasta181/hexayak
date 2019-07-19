@@ -1,7 +1,8 @@
 import React, {useContext} from 'react'
 import './App.css'
-import {BoardProvider} from './BoardContext'
-import {PlayerContext} from './PlayerContext'
+import {BoardProvider} from './Contexts/BoardContext'
+import {PlayerContext} from './Contexts/PlayerContext'
+import {ActionProvider} from './Contexts/ActionContext'
 import Board from './Board'
 import socket from './Socket'
 
@@ -16,9 +17,11 @@ const App = () => {
   
   return (
     <div id="App">
-        <BoardProvider>
-          <Board />
-        </BoardProvider>
+        <ActionProvider>
+          <BoardProvider>
+            <Board />
+          </BoardProvider>
+        </ActionProvider>
     </div>
   )
 }

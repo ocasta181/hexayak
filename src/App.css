@@ -8,6 +8,10 @@
   border: 1px solid red;
 }
 
+.Tile.p {
+  pointer-events: none;
+}
+
 .Row {
   border: 1px solid blue;
   display: flex;

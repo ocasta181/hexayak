@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import {BoardContext} from './BoardContext'
+import {BoardContext} from './Contexts/BoardContext'
 import Tile from './Tile'
 
 const Board = () => {
@@ -7,10 +7,10 @@ const Board = () => {
 
     return (
         <div id="Board">
-            {board.map(rows => (
+            {board.map((rows, j) => (
                 <div className="Row">
-                    {rows.map(tile => {
-                        return <Tile tile={tile}/>
+                    {rows.map((tile, i) => {
+                        return <Tile id={j.toString()+i.toString()} tile={tile}/>
                     })}
                 </div>
             ))}
