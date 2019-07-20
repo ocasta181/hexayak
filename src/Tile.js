@@ -1,11 +1,11 @@
 import React, {useState, useContext} from 'react'
 import {ActionContext} from './Contexts/ActionContext'
-import Rules from './Rules'
+import {useTryMove} from './Rules'
 
 const Tile = props => {
     const [action, setAction] = useContext(ActionContext)
 
-const handleMouseDown = event => {
+const useMouseDown = event => {
     let tile = event.currentTarget
     let id = tile.getAttribute('id')
     let conditions = tile.childNodes
@@ -23,7 +23,7 @@ const handleMouseDown = event => {
     event.preventDefault()
 }
 
-const handleMouseUp = event => {
+const useMouseUp = event => {
     let tile = event.currentTarget
     let id = tile.getAttribute('id')
     let conditions = tile.childNodes
@@ -40,11 +40,12 @@ const handleMouseUp = event => {
 
     event.preventDefault()
 
-    Rules.tryMove()
+    useTryMove()
+    // Can't call hooks in nested functions... must be at the top level!!
 }
 
     return (
-        <div id={props.id} className="Tile" onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>
+        <div id={props.id} className="Tile" onMouseDown={useMouseDown} onMouseUp={useMouseUp}>
             {props.tile.map(cond => {
                 return <p>{cond}</p>
             })}
