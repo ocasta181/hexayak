@@ -5,7 +5,7 @@ export const BoardContext = createContext()
 export const BoardProvider = props => {
     const [board, setBoard] = useState([
         [[],[],['capturable','player_1_flag'],[],['no_play'],['no_play'],['no_play']],
-        [['capturable','player_1_flag'],[],[],[],['capturable'],['no_play'],['no_play']],
+        [['capturable','player_1_flag'],[],['character'],[],['capturable'],['no_play'],['no_play']],
         [[],[],[],['capturable'],[],[],['no_play']],
         [[],['capturable'],[],[],[],['capturable'],[]],
         [['no_play'],[],[],['capturable'],[],[],[]],

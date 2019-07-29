@@ -4,6 +4,7 @@ import {BoardProvider} from './Contexts/BoardContext'
 import {PlayerContext} from './Contexts/PlayerContext'
 import {ActionProvider} from './Contexts/ActionContext'
 import Board from './Board'
+import Rules from './Rules'
 import socket from './Socket'
 
 const App = () => {
@@ -19,7 +20,9 @@ const App = () => {
     <div id="App">
         <ActionProvider>
           <BoardProvider>
-            <Board />
+            <Rules>
+              <Board />
+            </Rules>
           </BoardProvider>
         </ActionProvider>
     </div>
