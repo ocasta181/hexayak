@@ -4,6 +4,7 @@ import {BoardProvider} from './Contexts/BoardContext'
 import {PlayerContext} from './Contexts/PlayerContext'
 import {ActionProvider} from './Contexts/ActionContext'
 import Board from './Board'
+import Domain from './Domain'
 import Rules from './Rules'
 import socket from './Socket'
 
@@ -22,6 +23,7 @@ const App = () => {
           <BoardProvider>
             <Rules>
               <Board />
+              <Domain />
             </Rules>
           </BoardProvider>
         </ActionProvider>

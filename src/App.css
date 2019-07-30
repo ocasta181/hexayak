@@ -21,3 +21,27 @@
 #Board {
   /* transform: rotate(-60deg); */
 }
+
+#Domain {
+  border: 1px solid green;
+  display: flex;
+  width: 714px;
+}
+
+#Graveyard {
+  border: 1px solid orange;
+  height: 100px;
+  width: 200px;
+}
+
+#Hand {
+  border: 1px solid purple;
+  height: 100px;
+  width: 200px;
+}
+
+#Deck {
+  border: 1px solid orange;
+  height: 100px;
+  width: 200px;
+}

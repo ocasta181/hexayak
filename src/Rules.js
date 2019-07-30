@@ -8,6 +8,7 @@ const Rules = props => {
     const [action, setAction] = useContext(ActionContext)
     const [board, setBoard] = useContext(BoardContext)
 
+    // Move Character Rule
     useEffect(() => {
         let validMove = false
         if (action.length > 1){
@@ -39,10 +40,8 @@ const Rules = props => {
                         let new_tile = tile
                         if(j == character[1] && i == character[0]){
                             new_tile = tile.filter(elem => {return elem !== 'character'})
-                            console.log('new -from- tile: ',new_tile)
                         } else if(j == move_to[1] && i == move_to[0]){
                             new_tile.push('character')
-                            console.log('new -to- tile: ',new_tile)
                         }
                         new_board[j].push(new_tile)
                     })
