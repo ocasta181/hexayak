@@ -38,10 +38,18 @@
   border: 1px solid purple;
   height: 100px;
   width: 200px;
+  display: flex;
 }
 
 #Deck {
   border: 1px solid orange;
   height: 100px;
   width: 200px;
+  display: flex;
+}
+
+.Card {
+  border: 1px solid magenta;
+  height: 100px;
+  width: 75px;
 }

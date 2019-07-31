@@ -10,6 +10,7 @@ const Tile = props => {
         let conditions = tile.childNodes
         
         let new_action = {
+            'type': 'tile',
             'x': id[1], 
             'y': id[0], 
             'conditions': Array.from(conditions).map(cond => {
