@@ -14,6 +14,11 @@ const Rules = props => {
         if (action.length > 1){
             let character = null
             let move_to = null
+            // What will the shape of action be?
+            // 3? 
+            // Discard -> No further action
+            // Card action -> move or attack
+            // 
             action.some(act => {
                 if (character != null) {
                     move_to = [act.x, act.y]
